@@ -10,3 +10,5 @@ A look at satellite motion using classical finite difference numerical schemes
 ## The Semi-Explicit Euler Scheme
 
 ![Capture d’écran (19)](https://user-images.githubusercontent.com/93977173/169676406-1da7ab94-3b7f-4602-8868-09ceca599423.png)
+
+![Capture d’écran (15)](https://user-images.githubusercontent.com/93977173/169676449-70d02845-d6df-467d-bd93-823828cb843e.png)
