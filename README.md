@@ -3,16 +3,21 @@ A look at satellite motion using classical finite difference numerical schemes
 
 ## The differential System
 
-$$\begin{cases} \ddot{q}_1(t) =& Gm\dfrac{q_1(t)}{q_1^2(t) + q_2^2(t)}  \end{cases}$$
-
-![Capture d’écran (17)](https://user-images.githubusercontent.com/93977173/169676381-0d5fe58b-e5a1-414f-8ac5-648311462056.png)
+$$\begin{cases} \ddot{q}_1(t) =& Gm\dfrac{q_1(t)}{q_1^2(t) + q_2^2(t)} \\ \ddot{q}_2(t) =& Gm\dfrac{q_2(t)}{q_1^2(t) + q_2^2(t)}  \end{cases}$$
 
 ## The Explicit Euler Scheme
-![Capture d’écran (18)](https://user-images.githubusercontent.com/93977173/169676401-06cbb5f8-e3a1-42ed-8cac-c405eb9947d0.png)
+$$\begin{cases} q_{1,n+1}&=q_{1,n}+h\cdot\dot{q}_{1,n}\\
+q_{2,n+1}&=q_{2,n}+h\cdot\dot{q}_{2,n}\\
+\dot{q}_{1,n+1}&=\dot{q}_{1,n}-h\dfrac{q_{1,n}}{(q_{1,n}^2+q_{2,n}^2)^{\frac{3}{2}}}\\
+\dot{q}_{2,n+1}&=\dot{q}_{2,n}-h\dfrac{q_{2,n}}{(q_{1,n}^2+q_{2,n}^2)^{\frac{3}{2}}}  \end{cases}$$
 
 ## The Semi-Explicit Euler Scheme
-
-![Capture d’écran (19)](https://user-images.githubusercontent.com/93977173/169676406-1da7ab94-3b7f-4602-8868-09ceca599423.png)
+$$\begin{cases}
+q_{1,n+1}&=\frac{q_{1,n}}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}+\dfrac{\dot{q}_{1,n}\cdot h}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}\\\vspace{0.7cm
+q_{2,n+1}&=\dfrac{q_{2,n}}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}+\dfrac{\dot{q}_{2,n}\cdot h}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}\\\vspace{0.7cm}
+\dot{q}_{1,n+1}&=\dfrac{-q_{1,n}\cdot \dfrac{h}{ (q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}+\dfrac{\dot{q}_{1,n}}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}\\\vspace{0.7cm}
+\dot{q}_{2,n+1}&=\dfrac{-q_{2,n}\cdot \dfrac{h}{ (q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}+\dfrac{\dot{q}_{2,n}}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}
+\end{cases}$$
 
 
 ## Difference of the future according to the chosen scheme's type 
