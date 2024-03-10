@@ -3,7 +3,8 @@ A look at satellite motion using classical finite difference numerical schemes
 
 ## The differential System
 
-$$\begin{cases} \ddot{q}_1(t) =& Gm\dfrac{q_1(t)}{q_1^2(t) + q_2^2(t)} \\ \ddot{q}_2(t) =& Gm\dfrac{q_2(t)}{q_1^2(t) + q_2^2(t)}  \end{cases}$$
+$$\begin{cases} \ddot{q}_1(t) =& Gm\dfrac{q_1(t)}{q_1^2(t) + q_2^2(t)} \\ 
+\ddot{q}_2(t) =& Gm\dfrac{q_2(t)}{q_1^2(t) + q_2^2(t)}  \end{cases}$$
 
 ## The Explicit Euler Scheme
 $$\begin{cases} q_{1,n+1}&=q_{1,n}+h\cdot\dot{q}_{1,n}\\
