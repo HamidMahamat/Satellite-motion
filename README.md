@@ -17,7 +17,7 @@ q_{2,n+1} = & q_{2,n} + h\cdot\dot{q}_{2,n} \\
 ## The Semi-Explicit Euler Scheme
 
 $$\begin{cases}
-q_{1,n+1}&=\frac{q_{1,n}}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}+\dfrac{\dot{q}_{1,n}\cdot h}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}\\ 
+q_{1,n+1}&=\dfrac{q_{1,n}}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}+\dfrac{\dot{q}_{1,n}\cdot h}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}\\ 
 q_{2,n+1}&=\dfrac{q_{2,n}}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}+\dfrac{\dot{q}_{2,n}\cdot h}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}\\
 \dot{q}_{1,n+1}&=\dfrac{-q_{1,n}\cdot \dfrac{h}{ (q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}+\dfrac{\dot{q}_{1,n}}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}\\
 \dot{q}_{2,n+1}&=\dfrac{-q_{2,n}\cdot \dfrac{h}{ (q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}+\dfrac{\dot{q}_{2,n}}{  1+\dfrac{h^2}{(q_{1,n}^2+q_{2,n}^2)^\frac{3}{2}}}
