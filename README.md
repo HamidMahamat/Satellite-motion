@@ -10,6 +10,8 @@ $$\begin{cases} \ddot{q}_1(t) =& Gm\dfrac{q_1(t)}{q_1^2(t) + q_2^2(t)}\\
 ## The Explicit Euler Scheme
 
 $$\begin{cases} q_{1,n+1} =& q_{1,n}+h \cdot \dot{q}_{1,n}
+\\ 
+q_{2,n+1} = & q_{2,n} + h\cdot\dot{q}_{2,n}
 \end{cases}$$
 
 ## The Semi-Explicit Euler Scheme
